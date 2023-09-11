@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lin</groupId>
+    <artifactId>spring-security</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+
+    <modules>
+        <module>ss-01</module>
+        <module>ss-02</module>
+        <module>ss-04</module>
+        <module>ss-06-captcha</module>
+        <module>ss-07-encryption</module>
+        <module>ss-08-rememberme</module>
+        <module>ss-10-rememberme-split</module>
+        <module>ss-11-session</module>
+        <module>ss-12-csrf</module>
+        <module>ss-12-csrf-attacker</module>
+        <module>ss-13-csrf-split</module>
+        <module>ss-14-cros</module>
+        <module>ss-14-cros-security</module>
+        <module>ss-15-exception</module>
+        <module>ss-16-auth</module>
+        <module>ss-17-dynamic-auth</module>
+        <module>ss-18-oauth-github</module>
+        <module>ss-19-jwt</module>
+    </modules>
+
+</project>

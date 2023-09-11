@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lin.ss17dynamicauth.mapper.MenuMapper">
+    <resultMap id="MenuMap" type="com.lin.ss17dynamicauth.entity.Menu">
+        <id property="id" column="mid"/>
+        <result property="pattern" column="pattern"/>
+        <collection property="roles" ofType="com.lin.ss17dynamicauth.entity.Role">
+            <id property="id" column="rid"/>
+            <result property="name" column="name"/>
+            <result property="nameZh" column="nameZh"/>
+        </collection>
+    </resultMap>
+    <select id="getAllByRoles" resultMap="MenuMap">
+        select m.id mid, r.id rid, m.pattern, r.name, r.nameZh
+        from menu m
+                 left join menu_role mr on m.id = mr.mid
+                 left join role r on r.id = mr.rid
+    </select>
+
+
+</mapper>
